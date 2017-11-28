@@ -1,0 +1,95 @@
+{{> header}}
+
+<br>
+<br>
+{{> flash}}
+<div class="container">
+    <section class="text-center"> 
+        <p><h3>Регистрация</h3></p>
+    </section>
+    <br>
+    <form class="form form-horizontal" id="signup-form" method='POST'>
+        <input type='hidden', name='_csrf', value=_csrf>
+        <div class="form-group">
+            <label class="control-label col-sm-5" for="surname">Фамилия</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" name='surname' id="surname" placeholder="Иванов", required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-5" for="name">Имя</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" name='name' id="name" placeholder="Иван", autofocus, required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-5" for="patronymic">Отчество</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" name="patronymic" id="patronymic" placeholder="Иванович", required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-5" for='email'>Email</label>
+            <div class="col-sm-4">
+                <input type="email" class="form-control" name="email", id="email", placeholder="ivanov@gmail.com", required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-5" for='phone'>Номер телефона</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" name="phone", id="phone", placeholder="0997778866", required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class=" control-label col-sm-5" for='country'>Страна</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" name="country", id="country", placeholder="Украина", required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-5" for='city'>Город</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" name="city", id="city", placeholder="Днепр", required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-5" for='street'>Улица</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" name="street", id="street", placeholder="Рабочая", required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-5" for='houseNumb'>Номер дома</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" name="houseNumb", id="houseNumb", placeholder="48", required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-5" for='flatNumb'>Номер квартиры</label>
+            <div class="col-sm-4">
+                <input type="text"class="form-control" name="flatNumb", id="flatNumb", placeholder="11">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-5" for='password'>Пароль</label>
+            <div class="col-sm-4">
+                <input type="password" class="form-control" name="password", id="password", required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-5" for='confirmPassword'>Подтвердите пароль</label>
+            <div class="col-sm-4">
+                <input type="password" class="form-control" name="confirmPassword", id="confirmPassword", required>
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-7">
+                <button class="col-sm-3 btn btn-success" type="submit" id="signUp"><i class="fa fa-user-plus"></i>Зарегистрироваться</button>
+            </div>
+        </div>
+    </form>
+</div>
+{{> footer}}

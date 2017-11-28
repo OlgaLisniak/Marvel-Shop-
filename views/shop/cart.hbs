@@ -1,0 +1,49 @@
+{{> header}}
+
+<br>
+<br>
+
+<div class="container">
+    {{# if products }}
+        <div class="cart page">
+            <ul class="list-group">
+                {{# each products }}
+                <li class="list-group-item clearfix">
+                    <div class="col-xs-5">
+                        <h4><strong>{{ this.item.title }}</strong><br/></h4>
+                        <em>{{{this.item.description}}}</em>
+                    </div>
+                    <div class="col-xs-2 text-right">
+                       <h2><span class="badge badge-secondary">{{ this.quantity }}</span></h2>
+                    </div>
+                    <div class="col-xs-3 text-right">
+                        <h3>{{ this.price }} грн</h3>
+                    </div>
+                    <div class="text-right">
+                        <a href="/remove/{{this.item.id}}" class="btn btn-default"><i class="fa fa-times" aria-hidden="true"></i>Удалить</a>
+                    </div>
+                </li>
+                {{/each}}
+                
+            </ul>
+        </div>
+        <div class="text-right">
+            <h3>К оплате: <strong>{{ totalPrice }} грн</strong></h3>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-xs-11">
+                <a href="/logout" type="button" class="btn btn-primary btn-lg">Выйти</a>
+            </div>
+            <div class="col-xs-1">
+                <a href="/login" type="button" class="btn btn-success btn-lg">Далее</a>
+            </div>
+        </div>
+    {{ else }}
+        <br>
+        <br>
+        <br>
+        <h3>Ваша корзина пуста.</h3>
+    {{/if}}
+</div>
+{{> footer}}

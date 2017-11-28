@@ -1,0 +1,44 @@
+{{> header}}
+
+<br>
+<br>
+<br>
+{{> flash}}
+<div class="container">
+    <section class="text-center"> 
+        <p><h3>Чтобы совершить покупку необходимо авторизоваться</h3></p>
+    </section>
+    <br>
+    <br>
+    <section class="text-center"> 
+        <p><h3>Авторизация</h3></p>
+    </section>
+    <br>
+    <br>
+    <form class="form-horizontal" id="login-form" method="post">
+        <input type='hidden', name='_csrf', value=_csrf>
+            <div class="form-group">
+                <label class="control-label col-sm-5" for='email'>Email</label>
+                <div class="col-sm-5">
+                    <input type="email" class="form-control" name="email" id="email", placeholder="Email" autofocus, required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-5" for='password'>Password</label>
+                <div class="col-sm-5">
+                    <input type="password" class="form-control" name="password", id="password", placeholder="Password", required>
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <div class="col-sm-offset-5 col-sm-7">
+                    <button class="col-sm-3 btn btn-primary" type="submit"><i class="fa fa-user"></i>Войти</button>
+                </div>
+                <br>
+                <br>
+                <a class="btn btn-link" href="/signup">Еще не зарегистрированы?</a>
+            </div>
+    </form>
+</div>
+{{> footer}}
